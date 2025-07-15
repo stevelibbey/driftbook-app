@@ -1,70 +1,18 @@
-# Getting Started with Create React App
+# Driftbook -- a visual and sound project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is kicking off in MERN (MongoDB Atlas, Express, React, Node.js) for now. Explorations are underway of turning this from a browser based multimedia tool to a VST or iOS app.
 
-## Available Scripts
+No collaborators at this early stage. The code is still warm and has not yet developed a crust.
 
-In the project directory, you can run:
+# The Thing
 
-### `npm start`
+I'm building Driftbook to explore two ideas I've had for ages. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Firstly, a flipbook app for playing frame by frame sequences of images. I was inspired by the iterations over an image in MidJourney, which, browsed through quickly, reminded me of 60s experimental animation. I wanted to be able to zoom in on parts of an image and watch as it morphed at various speeds.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Secondly, I thought it would be cool to utilize this  similar to visual synths of the 19th century like the ANS or the Optigon. Sound generated from image. Sequences from MIDI input. But also from changing images, which results in a sound much like running a tone through a tremolo and phaser. The possibilities bloom, but only in the space of more powerful codebases, like Pure Data or even C++. Should it be a live instrument? A soundscape generator? Something else?
 
-### `npm test`
+# Progress
+I have the flipbook aspect working enough to zoom in and out, pan, and alter the FPS. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I am using the Tone.js synth library for playing sounds from a 3x3 grid overlaying the image, using brightness, Shannon entropy, and other factors to alter pitch. The flipping modulates the sound. It's limited so far, only because once I got the keys generating a tone or a pad, I had enough of a proof of concept that I had to decide how I was going to proceed with the interface and what contexts it could be used in. I researched historical examples of visual sound until I got so sleepy! But I am excited for this next stage.
