@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import Viewer from './components/Viewer';
+import SoundUI from './components/SoundUI';
+import installationsData from './installations.json';
 
-function App() {
+// Sound engine & MIDI
+import { initSoundEngine } from './sound/synthEngine';
+import { initMIDI } from './sound/midiHandler';
+
+export default function App() {
+  // expose installations globally for Viewer
+  window.installations = installationsData.installations;
+
+  useEffect(() => {
+    initSoundEngine();                     // set up Tone.js nodes
+    initMIDI();                            // wire up Web MIDI → synthEngine
+  }, []);
+
+  // start with first installation
+  const initial = installationsData.installations[0];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Viewer installation={initial} />
+      <SoundUI />
+    </>
   );
 }
-
-export default App;
