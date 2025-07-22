@@ -1,4 +1,7 @@
-[
+{
+  "installations": 
+    
+    [
   {
     "title": "Oozy Sequence 1",
     "slug": "oozy-seq-1",
@@ -130,3 +133,4 @@
     ]
   }
 ]
+}
