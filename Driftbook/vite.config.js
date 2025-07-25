@@ -3,6 +3,6 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: '/driftbook-app/', // 👈 Use your exact repo name here
+  base: '/driftbook-app/', 
   plugins: [react()]
 })
