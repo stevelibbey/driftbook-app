@@ -1,6 +1,6 @@
 # Driftbook
 
-##Stories in motion. Images in rhythm. Memory as performance.
+## Stories in motion. Images in rhythm. Memory as performance.
 
 Driftbook is a creative tool for writers, artists, and performers who work in both word and image. It transforms sequences of text and visuals into living, breathing compositions—part film, part poem, part dream.
 
